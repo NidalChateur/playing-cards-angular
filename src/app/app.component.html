@@ -1,8 +1,5 @@
 <!-- faire appel au composant enfant playing-card -->
  <div id="card-list">
-    <!-- ici attribut par défaut définit dans le playing-card.component.ts -->
-     <app-playing-card/>
-     <!-- ici les attributs sont redéfinit, 
-      pour les valeur de type numérique :  mettre l'attribut entre crochet -->
-     <app-playing-card name="Pikachu" [hp]="99"/>
+     <!-- on passe en input l'objet monster qui est obligatoire-->
+     <app-playing-card [monster]="monster1"/>
  </div>

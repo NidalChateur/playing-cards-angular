@@ -8,13 +8,13 @@
       <!-- partie gauche du titre -->
       <div class="left">
         <!-- nom du montre -->
-        <div id="name">{{name}}</div>
+        <div id="name">{{monster().name}}</div>
       </div>
 
       <!-- partie droite du titre -->
       <div class="right">
         <!-- point de vie du montre -->
-        <div id="hp">{{hp}} HP</div>
+        <div id="hp">{{monster().hp}} HP</div>
         <!-- icon type de monstre (les image sont dans public/img mais le path c'est img/...) -->
         <img class="energy icon" src="img/electric.png" alt=""/>
       </div>
@@ -26,7 +26,7 @@
         <!-- photo du monstre -->
         <img src="img/pic.png" alt="">
         <!-- sous titre de la photo -->
-        <figcaption>{{figureCaption}}</figcaption>
+        <figcaption>{{monster().figureCaption}}</figcaption>
     </figure>
 
     <!-- bloc capacités -->
@@ -40,13 +40,13 @@
                     <img src="img/electric.png" alt="" class="icon energy">
                 </div>
                 <!-- nom de l'attaque au centre-->
-                <div class="name">{{attackName}}</div>
+                <div class="name">{{monster().attackName}}</div>
                 <!-- puissance de l'attaque à droite-->
-                 <div class="damage">{{attackStrength}}</div>
+                 <div class="damage">{{monster().attackStrength}}</div>
             </div>
         </div>
         <!-- description de la capacité 1 -->
-         <div class="description">{{attackDescription}}</div>
+         <div class="description">{{monster().attackDescription}}</div>
 
      </div>
 

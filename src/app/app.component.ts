@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 // 1. importer ici le composant enfant pour pouvoir y faire appel dans le composant enfant
 import { PlayingCardComponent } from './components/playing-card/playing-card.component';
+import { Monster } from './models/monter.model';
 
 // paramètres du composant qui est la classe AppComponent
 @Component({
@@ -16,6 +17,15 @@ import { PlayingCardComponent } from './components/playing-card/playing-card.com
   styleUrl: './app.component.css',
 })
 export class AppComponent {
+  //le ! signifie que la variable sera initialisé plus tard (dans le constructeur)
+  monster1!: Monster;
 
-
+  // on définit les attribut du monster1 ici dans le constructeur
+  constructor() {
+    this.monster1 = new Monster();
+    this.monster1.name = 'Pik';
+    this.monster1.hp = 40;
+    this.monster1.figureCaption="N°002 Pik"
+    // pour le reste on garde les paramètre par défaut
+  }
 }
