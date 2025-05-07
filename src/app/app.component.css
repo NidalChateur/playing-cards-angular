@@ -1,0 +1,8 @@
+#card-list{
+  display: flex;
+  gap: 20px;
+  /* permet le retour à ligne automatique au lieu de scroller*/
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}

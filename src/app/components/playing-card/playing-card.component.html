@@ -1,0 +1,54 @@
+<!-- carte monstre -->
+<div id="card">
+  <div id="inside">
+
+    <!-- bloc titre -->
+    <header>
+
+      <!-- partie gauche du titre -->
+      <div class="left">
+        <!-- nom du montre -->
+        <div id="name">{{name}}</div>
+      </div>
+
+      <!-- partie droite du titre -->
+      <div class="right">
+        <!-- point de vie du montre -->
+        <div id="hp">{{hp}} HP</div>
+        <!-- icon type de monstre (les image sont dans public/img mais le path c'est img/...) -->
+        <img class="energy icon" src="img/electric.png" alt=""/>
+      </div>
+
+    </header>
+
+    <!-- bloc photo -->
+    <figure id="art">
+        <!-- photo du monstre -->
+        <img src="img/pic.png" alt="">
+        <!-- sous titre de la photo -->
+        <figcaption>{{figureCaption}}</figcaption>
+    </figure>
+
+    <!-- bloc capacités -->
+     <div id="capacities">
+        <!-- header de la capacité 1 -->
+        <div class="capacity">
+            <div class="main">
+                <!-- coût de l'attaque à gauche-->
+                <div class="cost">
+                    <img src="img/electric.png" alt="" class="icon energy">
+                    <img src="img/electric.png" alt="" class="icon energy">
+                </div>
+                <!-- nom de l'attaque au centre-->
+                <div class="name">{{attackName}}</div>
+                <!-- puissance de l'attaque à droite-->
+                 <div class="damage">{{attackStrength}}</div>
+            </div>
+        </div>
+        <!-- description de la capacité 1 -->
+         <div class="description">{{attackDescription}}</div>
+
+     </div>
+
+  </div>
+</div>

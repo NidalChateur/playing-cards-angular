@@ -1,0 +1,11 @@
+/* style global */
+body, html{
+    font-family: Roboto, sans-serif;
+    height: 100%;
+    /* dégradé dans le background de la couleur 1 à la couleur 2 */
+    background: linear-gradient(
+        545deg,
+        rgb(252,228,252),
+        rgb(218, 228, 255)
+    );
+}
