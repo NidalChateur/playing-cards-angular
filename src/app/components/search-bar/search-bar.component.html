@@ -1,8 +1,19 @@
 <div id="search-bar">
-    <!-- le paramètre ngModel est permit grace à FormsModule, auquel on passe la variable search -->
-     <!-- ngModelChange est un event qui écoute le changement dans le input et renvoi cette valeur -->
-      <!--      on la récupère dans $event -->
-    <input placeholder="Search..." [ngModel]="search" (ngModelChange)="updateSearch($event)">
+
+    <!-- 1. [ngModel] est un input de FormsModule -->
+    <!-- 2. (ngModelChange) est un écouteur de changement de la balise <input/> provenant de FormsModule-->
+
+    <!-- 3. [(ngModel)]="search" est une forme contracté/simplifié
+          a. écouté le changement via (ngModel) qui est une forme contracté de ngModelChange
+          b. (ngModel) renvoi $event
+          c. $event est assigné au model search
+          d. a chaque réaffectation du model "search" l'event du model search est déclenché
+          f. quand l'event du model search est déclenché : il renvoi sa valeur dans le composant
+          parent
+          -->
+
+    <input placeholder="Search..." [(ngModel)]="search">
+
     <!-- fais appel à la fonction  increaseCount() après chaque clique sur le bouton-->
     <button (click)="increaseCount()"><img src="img/search.png" alt=""></button>
 </div>

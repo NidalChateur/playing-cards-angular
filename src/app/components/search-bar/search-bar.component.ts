@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, model } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -15,16 +15,6 @@ export class SearchBarComponent {
     this.count++;
   }
 
-  // on passe comme paramètre à la balise input hmtl : la valeur Search 
-  @Input() search = 'Initial';
-
-  // création d'un event qui renvoi un string
-  @Output() searchChange = new EventEmitter<string>
-
-  // fonction appelé quand par l'écouteur html ngModelChange
-  // déclenche l'event searchChange et lui passe 
-  // en paramètre la valeur de changement
-  updateSearch(value: string){
-    this.searchChange.emit(value)
-  }
+  // model est à la fois un signal input et output
+  search = model<string>('Initial');
 }

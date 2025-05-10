@@ -1,10 +1,8 @@
- <!-- 1. on initialise la valeur search à '' -->
- <!-- 2. on écoute searchChange qui renvoi $event en sortie, que l'on stocke dans search-->
-<app-search-bar [search]="search" (searchChange)="search=$event" />
-
-<!-- 2' si le début du nom de l'événement Output() est similaire à une Input()
-    on peut peut abréger ceci [search]="search" (searchChange)="search=$event" en [(search)]="search"  -->
-<!-- <app-search-bar [(search)]="search"/> -->
+<!-- 0. la partie input du model search reçoit valeur la variable search qui est '' -->
+<!-- 1. on écoute si l'event search de l'élément enfant est déclenché -->
+<!-- 2. si oui, l'event search (élément enfant) renvoi une variable $event qui est stocké dans la variable search
+    de l'élément parent courant  -->
+<app-search-bar [(search)]="search"/>
 
 <br>
 
