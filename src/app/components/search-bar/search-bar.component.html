@@ -1,1 +1,11 @@
-<div id></div>
+<div id="search-bar">
+    <!-- le paramètre ngModel est permit grace à FormsModule, auquel on passe la variable search -->
+     <!-- ngModelChange est un event qui écoute le changement dans le input et renvoi cette valeur -->
+      <!--      on la récupère dans $event -->
+    <input placeholder="Search..." [ngModel]="search" (ngModelChange)="updateSearch($event)">
+    <!-- fais appel à la fonction  increaseCount() après chaque clique sur le bouton-->
+    <button (click)="increaseCount()"><img src="img/search.png" alt=""></button>
+</div>
+
+<!-- affiche le contenu de la variable count -->
+Click count : {{count}}

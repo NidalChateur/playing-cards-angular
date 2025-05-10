@@ -1,5 +1,12 @@
-<!-- faire appel au composant enfant playing-card -->
- <div id="card-list">
-     <!-- on passe en input l'objet monster qui est obligatoire-->
-     <app-playing-card [monster]="monster1"/>
- </div>
+ <!-- 1. on initialise la valeur search à '' -->
+ <!-- 2. on écoute searchChange qui renvoi $event en sortie, que l'on stocke dans search-->
+<app-search-bar [search]="search" (searchChange)="search=$event" />
+
+<!-- 2' si le début du nom de l'événement Output() est similaire à une Input()
+    on peut peut abréger ceci [search]="search" (searchChange)="search=$event" en [(search)]="search"  -->
+<!-- <app-search-bar [(search)]="search"/> -->
+
+<br>
+
+<!-- 3. on affiche la variable search -->
+Valeur recherchée : {{search}}

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 // 1. importer ici le composant enfant pour pouvoir y faire appel dans le composant enfant
 import { PlayingCardComponent } from './components/playing-card/playing-card.component';
 import { Monster } from './models/monter.model';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
 
 // paramètres du composant qui est la classe AppComponent
 @Component({
@@ -10,7 +11,7 @@ import { Monster } from './models/monter.model';
   // signifie qu'il n'a pas besoin de module pour exister (toujours à true sur les nouvelle versions)
   standalone: true,
   // 2. importer ici le composant enfant pour pouvoir y faire appel dans le composant enfant
-  imports: [PlayingCardComponent],
+  imports: [SearchBarComponent],
   // chemin relatif du template html
   templateUrl: './app.component.html',
   //chemin relatif du fichier style
@@ -19,13 +20,14 @@ import { Monster } from './models/monter.model';
 export class AppComponent {
   //le ! signifie que la variable sera initialisé plus tard (dans le constructeur)
   monster1!: Monster;
+  search: string = '';
 
   // on définit les attribut du monster1 ici dans le constructeur
   constructor() {
     this.monster1 = new Monster();
     this.monster1.name = 'Pik';
     this.monster1.hp = 40;
-    this.monster1.figureCaption="N°002 Pik"
+    this.monster1.figureCaption = 'N°002 Pik';
     // pour le reste on garde les paramètre par défaut
   }
 }

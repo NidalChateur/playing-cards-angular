@@ -16,7 +16,7 @@ export class PlayingCardComponent {
   // sinon ce sera le monster par défaut 
   // @Input() monster: Monster = new Monster();
 
-  //signaux :
+  //signal input :
   monster: InputSignal<Monster>= input(new Monster()) 
 
 }
